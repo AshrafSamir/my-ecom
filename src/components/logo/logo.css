@@ -1,0 +1,41 @@
+#r-wing,
+#l-wing,
+#r-tint,
+#l-tint {
+  filter: drop-shadow(0px 0px 11px #ed1986);
+}
+
+#curve {
+  filter: drop-shadow(0px 0px 5px #ed1986);
+  animation: 3s App-logo-curve linear;
+}
+
+#caprece {
+  stroke-dasharray: 2909;
+  stroke-dashoffset: 1000;
+  animation: 0.3s App-logo-stroke linear;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@keyframes App-logo-stroke {
+  0% {
+    stroke-dashoffset: 2909;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes App-logo-curve {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
