@@ -6,35 +6,103 @@
 }
 
 #curve {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
   filter: drop-shadow(0px 0px 5px #ed1986);
-  animation: 3s App-logo-curve linear;
+  animation: spin 4s 1s infinite, App-logo-curve 1s linear;
 }
 
 #caprece {
-  stroke-dasharray: 2909;
-  stroke-dashoffset: 1000;
-  animation: 0.3s App-logo-stroke linear;
+  animation: App-logo-caprece 1s linear;
+}
+#butterfly {
+  animation: App-logo-butterfly-opacity 1.2s linear,
+    App-logo-butterfly 1s linear;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-logo:hover {
+  height: 40vh;
 }
 
-@keyframes App-logo-stroke {
+.App-logo:hover #head {
+  filter: drop-shadow(0px 0px 11px #ed1986);
+}
+.App-logo:hover #body {
+  filter: drop-shadow(0px 0px 11px #ed1986);
+}
+.App-logo:hover #b-right {
+  filter: drop-shadow(0px 0px 11px #ed1986);
+}
+.App-logo:hover #b-left {
+  filter: drop-shadow(0px 0px 11px #ed1986);
+}
+.App-logo:hover #s-right {
+  filter: drop-shadow(0px 0px 11px #ed1986);
+}
+.App-logo:hover #s-left {
+  filter: drop-shadow(0px 0px 11px #ed1986);
+}
+
+@keyframes App-logo-caprece {
   0% {
-    stroke-dashoffset: 2909;
+    opacity: 0%;
+    transform: translate(-10px, -200px);
+  }
+  50% {
+    opacity: 100%;
+    transform: translate(-10px, -200px);
   }
   100% {
-    stroke-dashoffset: 0;
+    opacity: 100%;
+    transform: translate(0px, 0px);
   }
 }
 
 @keyframes App-logo-curve {
   0% {
     opacity: 0%;
+    transform: translate(-10px, -200px);
+  }
+  50% {
+    opacity: 100%;
+    transform: translate(-10px, -200px);
   }
 
+  100% {
+    opacity: 100%;
+    transform: translate(0px, 0px);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-butterfly {
+  0% {
+    transform: translate(10px, 50px);
+  }
+  50% {
+    transform: translate(10px, 50px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes App-logo-butterfly-opacity {
+  0% {
+    opacity: 0%;
+  }
+  55% {
+    opacity: 0%;
+  }
   100% {
     opacity: 100%;
   }
