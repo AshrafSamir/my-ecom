@@ -20,8 +20,11 @@
     App-logo-butterfly 1s linear;
 }
 
+.App-logo {
+  width: 50vh;
+}
 .App-logo:hover {
-  height: 40vh;
+  transform: scale(1.1);
 }
 
 .App-logo:hover #head {
