@@ -1,12 +1,26 @@
-import Logo from "./components/logo/Logo";
+import { useEffect, useState } from "react";
 import "./App.css";
+import Logo from "./components/logo/Logo";
+import Card from "./components/card/Card";
 
 function App() {
+  const [hideLogo, setHideLogo] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setHideLogo(true);
+    }, 6000);
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
+      {!hideLogo ? (
         <Logo />
-      </header>
+      ) : (
+        <div className="card-container">
+          <Card />
+          <Card />
+          <Card />
+        </div>
+      )}
     </div>
   );
 }
