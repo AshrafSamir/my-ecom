@@ -4,6 +4,9 @@
   min-width: 500px;
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product-img {
   min-width: 500px;
@@ -14,7 +17,7 @@
 h1 {
   position: absolute;
   top: 300px;
-  left: 140px;
+  left: 120px;
 }
 .container:hover h1 {
   transform: translateY(-200px);
@@ -54,4 +57,63 @@ h1 {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.main-label {
+  font-family: sans-serif;
+  color: rgb(216, 210, 210);
+}
+
+.input-width {
+  width: 10%;
+  border: 1px solid;
+  border-radius: 10%;
+  margin: 2%;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0%;
+}
+
+.container:hover .form-container {
+  opacity: 100%;
+  animation: appear-form 0.9s linear;
+}
+
+@keyframes appear-form {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.submit-button {
+  margin-top: 50px;
+  width: 150px;
+  height: 65px;
+  border: none;
+  border-radius: 30px;
+}
+
+.submit-button:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 5px #926a6a);
+}
+
+.quantatiy-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.size-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

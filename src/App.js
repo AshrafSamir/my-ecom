@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setHideLogo(true);
-    }, 6000);
+    }, 0);
   }, []);
   return (
     <div className="App">
